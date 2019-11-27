@@ -20,6 +20,7 @@ PROJECT(tklayout)
 #----------------------------------------------------------------------------
 # Project options
 OPTION( INSTALL_DOC "Set to OFF to skip build/install Documentation" ON )
+set(CMAKE_CXX_STANDARD 17)
 
 #----------------------------------------------------------------------------
 # Advanced settings

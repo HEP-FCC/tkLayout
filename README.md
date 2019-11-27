@@ -36,45 +36,9 @@ Developed at CERN by Giovanni Bianchi, Nicoletta De Maio, Stefano Martina and St
 developed at CERN by Zbynek Drasal in collaboration with the tkLayout team `https://github.com/tkLayout`. To support an 
 XML output, `tinyXML` library has been included within the project (c.f. `LICENSE_TinyXML` file).
 
-# Getting the code
-The code is accessible from an official github repository: `https://github.com/tkLayout` or author's github repository: 
-`https://github.com/drasal/tkLayout` (use clone command to make a local copy):
-
-    git clone -b masterLite https://github.com/tkLayout.git
-    cd tkLayout
-
-To join the effort on code development or to try out the newest features implemented during the tkLayout-lite development, 
-clone directly the development branch `devLite` from author's github repository:
-
-    git clone -b devLite  https://github.com/drasal/tkLayout.git
-    cd tkLayout
-
-# Before the compilation/run
-Generally, one needs several libraries to be linked with the tkLayout-lite: a working version of **ROOT 6** (`root` and 
-`root-config` should be in a user's path defined by `ROOTSYS` variable) and 2 specific **BOOST libraries**:
-
- * ROOT 6 library set (follow instructions on `https://root.cern.ch/downloading-root`)
- * `boost_filesystem`
- * `boost_regex`
-
-On CERN lxplus machine, the procedure is quite straightforward, simply run a bash shell and source the following 
-configuration file before the compilation:
-
-    source setup_slc6.sh
-
-On local Linux machine, the environmental variables need to be set first in a local `setup.sh` file:
-
- * `BOOST_LIB`: BOOST libs directory
- * `BOOST_INCLUDE`: BOOST include files directory
- * `BOOST_SUFFIX`: Usually no suffix on local machines, mainly used by complex computer systems to identify different versions of BOOST installations 
- * `ROOTSYS`: ROOT 6 directory (`root-config` used by CMake to configure ROOT libs and includes for compilation is assumed to be located in `ROOTSYS/bin`)
-
-and then the file has to be sourced:
-
-    source setup.sh
 
 # Compilation/Install
-Compilation using **CMake** (don't forget to setup variables using `setup.sh`/`setup_sl5.sh` beforehand):
+Compilation using **CMake** (don't forget to setup variables using `source setup.sh` beforehand):
 
     mkdir build     (all object files, help files, libs, ... will be kept here)
     cd build
