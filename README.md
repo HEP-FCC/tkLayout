@@ -38,7 +38,12 @@ XML output, `tinyXML` library has been included within the project (c.f. `LICENS
 
 
 # Compilation/Install
-Compilation using **CMake** (don't forget to setup variables using `source setup.sh` beforehand):
+
+Setup dependencies:
+```
+source /cvmfs/fcc.cern.ch/sw/latest/setup.sh
+```
+Compilation using **CMake** (don't forget to setup variables using `source` beforehand):
 
     mkdir build     (all object files, help files, libs, ... will be kept here)
     cd build
